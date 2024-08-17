@@ -1,0 +1,127 @@
+.programs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.programs-header {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    gap: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.programs-header > :nth-child(1),
+.programs-header > :nth-child(3) {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.program-categories {
+    display: flex;
+    width: 100%;
+    margin-left: 3rem;
+    gap: 3rem;
+    position: relative; /* Ensure proper stacking context for children */
+}
+
+.color-ani {
+    position: relative;
+    border-radius: 9px;
+    width: fit-content;
+    padding: .5rem;
+    animation: rotate 3s infinite linear;
+}
+
+/* Animation for rotating background */
+
+.color-ani::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 9px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    filter: blur(8px);
+    z-index: -1;
+    animation: glowing 30s linear infinite;
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 100% 200%; }
+    50% { background-position: 400% 500%; }
+    100% { background-position: 100% 200%; }
+}
+
+.catogory {
+    position: relative;
+    width: 160px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 9px;
+    justify-content: space-between;
+    z-index: 2;
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.catogory:hover {
+    position: relative;
+    width: 160px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 9px;
+    justify-content: space-between;
+    z-index: 2;
+    overflow: hidden; /* Ensure content stays within bounds */
+    &.catogory > :nth-child(1) {
+        width: 2rem;
+        height: 2rem;
+        fill: black;
+    }
+}
+/* Glow effect for .catogory */
+
+.catogory > :nth-child(1) {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+}
+
+.catogory > :nth-child(2) {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.catogory > :nth-child(3) {
+    font-size: .9rem;
+}
+
+.join-now {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.join-now > img {
+    width: 1rem;
+}

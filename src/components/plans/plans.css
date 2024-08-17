@@ -1,0 +1,75 @@
+.plans-container{
+    margin-top: -4rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+}
+
+.plans{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 55rem;
+    height: 30rem;
+    margin-left: 9.5rem ;
+}
+
+.plan{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: white;
+    padding: 1.5rem;
+    gap: 2rem;
+    height: 25rem;
+    width: 15rem;
+    align-items: center;
+    border-radius: 15px;
+}
+.plan>svg{
+    width: 2.5rem;
+    fill: white;
+}
+.features{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.feature > img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.btn{
+    background-color: white;
+    color: black;
+    border-radius: 9px;
+}
+
+.plan:hover{
+    background-color: white;
+    color: black;
+    &.plan>svg{
+        fill: black;
+    }
+}
+
+.plan:hover .btn{
+    background-color: black;
+    color: white;
+}
+
+.plan:hover .feature>img{
+    fill: black;
+}
